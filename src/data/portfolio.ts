@@ -42,6 +42,8 @@ export const portfolio = {
   projects: [
     {
       title: 'Warehouse Management System (Capstone Project)',
+      year: '2026',
+      type: 'school',
       description:
         'Full-stack warehouse management platform with inventory management, authentication, and role-based access control.',
       highlights: [
@@ -65,7 +67,34 @@ export const portfolio = {
         'https://www.linkedin.com/feed/update/urn:li:activity:7452780457919782913/',
     },
     {
+      title: 'NewLeaf',
+      year: '2025',
+      type: 'school',
+      description:
+        'Animal community platform where people share pets, post in a community feed, and list animals for adoption.',
+      highlights: [
+        'Co-built a full-stack Next.js app with one friend — pet profiles, a community feed, and an adoption request flow.',
+        'Implemented Firebase Authentication (email, Google, GitHub) and Firestore for users, pets, posts, likes, and adoption requests.',
+        'Built community posts with Cloudinary image uploads, likes, featured pets, and protected routes for signed-in users.',
+        'Designed adoption workflow where owners accept or reject requests and ownership transfers in Firestore.',
+      ],
+      technologies: [
+        'Next.js',
+        'React',
+        'Tailwind CSS',
+        'Firebase Auth',
+        'Cloud Firestore',
+        'Cloudinary',
+        'Vercel',
+      ],
+      githubUrl: 'https://github.com/MonicaLeung0/newleaf',
+      liveUrl: 'https://newleaf-iota.vercel.app/',
+      linkedinUrl: '',
+    },
+    {
       title: 'Multiplayer Tic-Tac-Toe',
+      year: '2024',
+      type: 'self',
       description:
         'A two-player online Tic-Tac-Toe game with room codes, game sessions, and real-time player communication.',
       highlights: [
@@ -75,12 +104,14 @@ export const portfolio = {
         'Created game session management and player communication features.',
       ],
       technologies: ['C#', 'ASP.NET Core', 'Entity Framework', 'HTML', 'CSS', 'JavaScript'],
-      githubUrl: 'https://github.com/MonicaLoVO',
+      githubUrl: 'https://github.com/MonicaLOvO/TicTacToe',
       liveUrl: '',
       linkedinUrl: '',
     },
     {
       title: 'CEO Simulator',
+      year: '2024',
+      type: 'self',
       description:
         'A text-based console game where you spend 12 days running a company your father handed you. Every choice shifts money and reputation — at the end, he judges whether you have what it takes to be CEO.',
       highlights: [
@@ -90,12 +121,14 @@ export const portfolio = {
         'Used JSON-driven content for events and shop items, with auto-save, 10 named save slots, and a built-in content editor.',
       ],
       technologies: ['C#', '.NET 8', 'Console App', 'Newtonsoft.Json'],
-      githubUrl: 'https://github.com/MonicaLoVO',
+      githubUrl: 'https://github.com/MonicaLOvO/CEO-Sim',
       liveUrl: '',
       linkedinUrl: '',
     },
     {
       title: 'TRPG Platform',
+      year: '2025',
+      type: 'self',
       description:
         'A Call of Cthulhu–style TRPG backend for character sheets, class templates, and multiplayer game rooms — built in ASP.NET Core and ported to Express / TypeScript with the same domain model.',
       highlights: [
@@ -114,7 +147,9 @@ export const portfolio = {
         'Prisma',
         'MySQL',
       ],
-      githubUrl: 'https://github.com/MonicaLoVO',
+      githubUrl: 'https://github.com/MonicaLOvO/TRPG',
+      githubUrlAlt: 'https://github.com/MonicaLOvO/Typescript_TRPG',
+      githubAltLabel: 'TypeScript port',
       liveUrl: '',
       linkedinUrl: '',
     },
@@ -133,7 +168,7 @@ export const portfolio = {
     phone: '(587) 917-9870',
     location: 'Calgary, AB',
     email: 'monica.leung.w@gmail.com',
-    github: 'https://github.com/MonicaLoVO',
+    github: 'https://github.com/MonicaLovo',
     linkedin: 'https://www.linkedin.com/in/monica-leung-85b899403',
   },
 } as const

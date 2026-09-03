@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import { portfolio } from '../data/portfolio'
 import ThemeToggle from './ThemeToggle'
 
 const links = [
@@ -16,7 +15,7 @@ export default function Nav() {
     <header className="nav">
       <div className="nav-inner">
         <NavLink to="/" className="nav-brand" end>
-          {portfolio.name}
+          Portfolio
         </NavLink>
         <div className="nav-right">
           <nav className="nav-links" aria-label="Main">

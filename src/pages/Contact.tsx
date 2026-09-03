@@ -1,50 +1,76 @@
+import Reveal from '../components/Reveal'
 import { portfolio } from '../data/portfolio'
+
+type ContactItem = {
+  label: string
+  display: string
+  href?: string
+  external?: boolean
+}
 
 export default function Contact() {
   const { phone, location, email, github, linkedin } = portfolio.contact
+  const items: ContactItem[] = [
+    phone && {
+      label: 'Phone',
+      display: phone,
+      href: `tel:${phone.replace(/\D/g, '')}`,
+    },
+    location && {
+      label: 'Location',
+      display: location,
+    },
+    email && {
+      label: 'Email',
+      display: email,
+      href: `mailto:${email}`,
+    },
+    github && {
+      label: 'GitHub',
+      display: github.replace(/^https?:\/\//, ''),
+      href: github,
+      external: true,
+    },
+    linkedin && {
+      label: 'LinkedIn',
+      display: linkedin.replace(/^https?:\/\//, ''),
+      href: linkedin,
+      external: true,
+    },
+  ].filter(Boolean) as ContactItem[]
 
   return (
     <main>
-      <p className="section-label">Connect</p>
-      <h1 className="page-title">Contact</h1>
-      <p className="page-lead">
-        Reach out for opportunities, collaborations, or questions.
-      </p>
+      <Reveal>
+        <p className="section-label">Connect</p>
+        <h1 className="page-title">Contact</h1>
+        <p className="page-lead">
+          Reach out for opportunities, collaborations, or questions.
+        </p>
+      </Reveal>
       <ul className="contact-list">
-        {phone && (
-          <li>
-            <span className="contact-label">Phone</span>
-            <a href={`tel:${phone.replace(/\D/g, '')}`}>{phone}</a>
-          </li>
-        )}
-        {location && (
-          <li>
-            <span className="contact-label">Location</span>
-            <span className="contact-value">{location}</span>
-          </li>
-        )}
-        {email && (
-          <li>
-            <span className="contact-label">Email</span>
-            <a href={`mailto:${email}`}>{email}</a>
-          </li>
-        )}
-        {github && (
-          <li>
-            <span className="contact-label">GitHub</span>
-            <a href={github} target="_blank" rel="noreferrer">
-              {github.replace(/^https?:\/\//, '')}
-            </a>
-          </li>
-        )}
-        {linkedin && (
-          <li>
-            <span className="contact-label">LinkedIn</span>
-            <a href={linkedin} target="_blank" rel="noreferrer">
-              {linkedin.replace(/^https?:\/\//, '')}
-            </a>
-          </li>
-        )}
+        {items.map((item, index) => (
+          <Reveal key={item.label} as="li" delay={index * 70}>
+            {item.href ? (
+              <a
+                href={item.href}
+                className="card contact-item contact-item--link"
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noreferrer' : undefined}
+              >
+                <span className="contact-label">{item.label}</span>
+                <span className="contact-value contact-link-text">
+                  {item.display}
+                </span>
+              </a>
+            ) : (
+              <div className="card contact-item">
+                <span className="contact-label">{item.label}</span>
+                <span className="contact-value">{item.display}</span>
+              </div>
+            )}
+          </Reveal>
+        ))}
       </ul>
     </main>
   )
