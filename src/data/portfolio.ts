@@ -165,7 +165,7 @@ export const portfolio = {
   ],
 
   contact: {
-    phone: '(587) 917-9870',
+    phone: '',
     location: 'Calgary, AB',
     email: 'monica.leung.w@gmail.com',
     github: 'https://github.com/MonicaLovo',
