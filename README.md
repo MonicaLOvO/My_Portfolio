@@ -1,75 +1,62 @@
-# React + TypeScript + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for **Monica Leung** — Software Developer.
 
-Currently, two official plugins are available:
+**Live site:** [monicaleung0.github.io/My_Portfolio](https://monicaleung0.github.io/My_Portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+A multi-page portfolio built with React and TypeScript. It showcases projects, skills, education, and contact info, with a responsive layout and light/dark themes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Pages:** Home · About · Skills · Projects · Education · Contact
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Vite](https://vite.dev/)
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/)
+- Plain CSS (theme variables, animations)
+- [GitHub Pages](https://pages.github.com/) + GitHub Actions
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Light / dark mode with a smooth theme transition
+- Project cards with school vs. self filters, GitHub links, and live demos
+- Skills, education, and contact sections
+- Card hover glow and scroll reveal animations
+- Content driven from a single data file: `src/data/portfolio.ts`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Local development
 
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Open the URL shown in the terminal (usually `http://localhost:5173`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run build
+npm run preview
 ```
+
+## Deploy
+
+Pushing to the `main` branch triggers the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages.
+
+Make sure:
+
+1. The GitHub repo name matches the `base` path in `vite.config.ts` (currently `/My_Portfolio/`).
+2. GitHub Pages is set to **GitHub Actions** as the source.
+
+## Edit your content
+
+Update `src/data/portfolio.ts` to change bio, skills, projects, education, and contact details.
+
+## Contact
+
+- **Email:** monica.leung.w@gmail.com
+- **LinkedIn:** [monica-leung](https://www.linkedin.com/in/monica-leung-85b899403)
+- **GitHub:** [MonicaLeung0](https://github.com/MonicaLeung0)
