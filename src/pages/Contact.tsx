@@ -9,13 +9,8 @@ type ContactItem = {
 }
 
 export default function Contact() {
-  const { phone, location, email, github, linkedin } = portfolio.contact
+  const { location, email, github, linkedin } = portfolio.contact
   const items: ContactItem[] = [
-    phone && {
-      label: 'Phone',
-      display: phone,
-      href: `tel:${phone.replace(/\D/g, '')}`,
-    },
     location && {
       label: 'Location',
       display: location,
