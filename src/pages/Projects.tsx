@@ -53,6 +53,11 @@ function ProjectCard({
           >
             {project.type === 'school' ? 'School' : 'Self project'}
           </button>
+          {'group' in project && project.group && (
+            <span className="tag project-type-tag project-type-tag--group">
+              Group
+            </span>
+          )}
         </div>
         <span className="project-year">{project.year}</span>
       </div>
@@ -110,7 +115,9 @@ function ProjectCard({
             >
               {project.githubUrl && (
                 <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                  GitHub
+                  {'githubLabel' in project && project.githubLabel
+                    ? project.githubLabel
+                    : 'GitHub'}
                 </a>
               )}
               {'githubUrlAlt' in project && project.githubUrlAlt && (

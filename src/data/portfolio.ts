@@ -44,6 +44,7 @@ export const portfolio = {
       title: 'Warehouse Management System (Capstone Project)',
       year: '2026',
       type: 'school',
+      group: true,
       description:
         'Full-stack warehouse management platform with inventory management, authentication, and role-based access control.',
       highlights: [
@@ -67,9 +68,39 @@ export const portfolio = {
         'https://www.linkedin.com/feed/update/urn:li:activity:7452780457919782913/',
     },
     {
+      title: 'TrueNorth',
+      year: '2026',
+      type: 'school',
+      group: true,
+      description:
+        'Mobile-first web app — “Your AI compass for everyday decisions.” Helps people choose what to eat, where to go, what to watch, and more through guided questions, chat, and voice. Frontend (truenorth_frontend) talks to a separate AI backend.',
+      highlights: [
+        'Built a Next.js mobile-first UI for Food, Travel, Movies, Music, Games, Books, Shopping, and Fitness decisions.',
+        'Implemented three modes per category: guided multiple-choice questions, free-form chat, and browser voice recording with backend transcription.',
+        'Added optional login/register (or guest), profile, light/dark theme, and an Explore page of recent AI suggestions stored in the browser.',
+        'Connected the frontend to a separate backend via Next.js /api rewrites, with JWT auth in localStorage.',
+      ],
+      technologies: [
+        'Next.js',
+        'React',
+        'TypeScript',
+        'Tailwind CSS',
+        'NestJS',
+        'next-themes',
+        'lucide-react',
+      ],
+      githubUrl: 'https://github.com/MonicaLOvO/TrueNorth_Frontend',
+      githubLabel: 'Frontend',
+      githubUrlAlt: 'https://github.com/MonicaLOvO/TrueNorth_Backend',
+      githubAltLabel: 'Backend',
+      liveUrl: '',
+      linkedinUrl: '',
+    },
+    {
       title: 'NewLeaf',
       year: '2025',
       type: 'school',
+      group: true,
       description:
         'Animal community platform where people share pets, post in a community feed, and list animals for adoption.',
       highlights: [

@@ -988,6 +988,13 @@ img {
   color: var(--self-project);
 }
 
+.project-type-tag--group {
+  border-color: color-mix(in srgb, var(--accent-alt) 45%, var(--line));
+  background: color-mix(in srgb, var(--accent-alt) 14%, transparent);
+  color: var(--accent-alt);
+  cursor: default;
+}
+
 .project-summary {
   margin: 0 0 0.85rem;
   color: var(--text-muted);
