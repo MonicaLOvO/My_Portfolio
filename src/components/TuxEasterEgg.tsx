@@ -54,7 +54,7 @@ export default function TuxEasterEgg() {
           <div className="tux-egg-copy">
             <p className="tux-egg-name">Tux</p>
             <p className="tux-egg-caption">
-            My little sweet guy, and a mix of bugs.
+            My Cat, a sweet guy, and a mix of bugs.
             </p>
           </div>
         </div>
